@@ -23,8 +23,8 @@ let resets = 0;
 // set event listeners
 playButton.addEventListener('click', () => {
     // get user input
-    const selected = document.querySelector('input[type=radio]:checked');
-    const userChoice = selected.value;
+    let selected = document.querySelector('input[type=radio]:checked');
+    let userChoice = selected.value;
 
     let computerChoice = getRandomThrow();
 

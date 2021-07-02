@@ -6,81 +6,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/style.css">
+    <!-- <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css"> -->
     <link rel="stylesheet" href="./styles/home.css">
     <title>Rock, Paper, Scissors</title>
 </head>
 
 <body>
     <header>
-        <div class="gutter-right logo">
-            <img src="assets/big-logo.png" />
-        </div>
+        <h2>
+            Welcome to Rock, Paper, Scissors!
+        </h2>
     </header>
 
     <main>
-        <section>
-            <h2>
-                Welcome to Rock, Paper, Scissors!
-            </h2>
-        </section>
 
-        <section>
-            <label>
-                Rock
-                <input type="radio" name="rps" value="rock">
-            </label>
-            <label>
-                Paper
-                <input type="radio" name="rps" value="paper">
-            </label>
-            <label>
-                Scissors
-                <input type="radio" name="rps" value="scissors">
-            </label>
-        </section>
+        <div id="container-id">
+            <section>
+                <p>You know the rules ... :</p>
+                    <ul>
+                        <li>Rock beats scissors;</li>
+                        <li>Paper beats rock;</li>
+                        <li>Scissors beats paper;</li>
+                    </ul>
+                <p>Make your selection by clicking on one of the three icons below,<br>
+                hit the Play button, and throw your hand in against a randomly-<br>
+                generated computer hand.  Let's see how you do — good luck!</p>
+            </section>
 
-        <section>
-            <div>
-                Computer Threw: <span id="computer-threw-id">Undetermined</span>
-            </div>
-            <div>
-                Round Result: <span id="round-result-id">Undetermined</span>
-            </div>
-        </section>
+            <section id="radio-ids">
+                <label>
+                    "R" for Rock
+                    <input type="radio" name="rps" value="rock">
+                    <img src="./assets/letter-r.png" height="300px" alt="rock image">
+                </label>
+                <label>
+                    "P" for Paper
+                    <input type="radio" name="rps" value="paper">
+                    <img src="./assets/letter-p.png" height="300px" alt="paper image">
+                </label>
+                <label>
+                    "S" for Scissors
+                    <input type="radio" name="rps" value="scissors">
+                    <img src="./assets/letter-s.png" height="300px" alt="scissors image">
+                </label>
+            </section>
 
-        <section>
-            <div>
-                <button id="play-button-id">Play!</button>
-            </div>
-        </section>
+            <section>
+                <div>
+                    Computer Threw: <span id="computer-threw-id">Undetermined</span>
+                </div>
+                <div>
+                    Round Result: <span id="round-result-id">Undetermined</span>
+                </div>
+            </section>
 
-        <section>
-            <div>
-                Accumulated Wins: <span id="total-wins-id">0</span>
-            </div>
-            <div>
-                Accumulated Losses: <span id="total-losses-id">0</span>
-            </div>
-            <div>
-                Accumulated Draws: <span id="total-draws-id">0</span>
-            </div>
-            <div>
-                Accumlated Resets: <span id="total-resets-id">0</span>
-            </div>
-        </section>
+            <section>
+                <div>
+                    <button id="play-button-id">Play!</button>
+                </div>
+            </section>
 
-        <section>
-            <div>
-                <button id="reset-button-id">Reset ALL Counts!</button>
-            </div>
-        </section>
+            <section>
+                <div>
+                    Accumulated Wins: <span id="total-wins-id">0</span>
+                </div>
+                <div>
+                    Accumulated Losses: <span id="total-losses-id">0</span>
+                </div>
+                <div>
+                    Accumulated Draws: <span id="total-draws-id">0</span>
+                </div>
+                <div>
+                    Accumlated Resets: <span id="total-resets-id">0</span>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <button id="reset-button-id">Reset ALL Counts!</button>
+                </div>
+            </section>
+        </div>
 
     </main>
 
     <footer>
-        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
+        <!-- <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div> -->
     </footer>
 
     <script type="module" src="./app.js"></script>

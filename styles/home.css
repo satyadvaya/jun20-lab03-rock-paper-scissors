@@ -1,1 +1,41 @@
 /* add home page styles here */
+#radio-ids {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 15px;
+    width: 700px;
+}
+
+input {
+    display: none;
+}
+
+input[type=radio]:checked + img {
+    border: tomato 5px solid;
+}
+
+img {
+    border-radius: 15%;
+}
+
+section {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+h2 {
+    text-align: center;
+    width: 700px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#container-id {
+    width: 700px;
+    border: black 3px solid;
+    background-color: lightpink;
+}
