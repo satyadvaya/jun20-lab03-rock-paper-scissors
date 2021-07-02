@@ -1,6 +1,7 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 import { didUserWin } from '../utils.js';
+import { getRandomThrow } from '../get-random-throw.js';
 
 const test = QUnit.test;
 
@@ -33,4 +34,20 @@ test('testing all outcome combinations in didUserWin function between player and
     expect.equal(draw, draw);
     expect.equal(draw2, draw);
     expect.equal(draw3, draw);
+});
+
+test('testing that the output of the getRandomThrow function has a data type of string', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    // const expected = true;
+    const expected = 'string';
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    // const actual = true;
+    const actual = typeof(getRandomThrow());
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
 });
