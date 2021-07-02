@@ -1,11 +1,11 @@
-export function didUserWin {
+export function didUserWin(player, computer) {
     if (player === computer) {
-        return ('This round is a DRAW!');
+        return ('draw');
     } else if (player === 'rock' && computer === 'scissors') {
-        return ('You WIN this round!');
+        return ('win');
     } else if (player === 'paper' && computer === 'rock') {
-        return ('You WIN this round!');
+        return ('win');
     } else if (player === 'scissors' && computer === 'paper') {
-        return ('You WIN this round!');
-    } else return ('You LOSE this round!');
+        return ('win');
+    } else return ('loss');
 }
