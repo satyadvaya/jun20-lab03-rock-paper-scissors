@@ -10,6 +10,7 @@ const playButton = document.getElementById('play-button-id');
 const totalWins = document.getElementById('total-wins-id');
 const totalLosses = document.getElementById('total-losses-id');
 const totalDraws = document.getElementById('total-draws-id');
+const totalResets = document.getElementById('total-resets-id');
 
 const resetButton = document.getElementById('reset-button-id');
 
@@ -17,14 +18,15 @@ const resetButton = document.getElementById('reset-button-id');
 let wins = 0;
 let losses = 0;
 let draws = 0;
+let resets = 0;
 
 // set event listeners
 playButton.addEventListener('click', () => {
     // get user input
     const selected = document.querySelector('input[type=radio]:checked');
-
     const userChoice = selected.value;
-    const computerChoice = getRandomThrow();
+
+    let computerChoice = getRandomThrow();
 
     // use user input to update state
     const isWinner = didUserWin(userChoice, computerChoice);
@@ -49,5 +51,14 @@ playButton.addEventListener('click', () => {
 });
 
 resetButton.addEventListener('click', () => {
-    return window.location.reload();
+    computerThrew.innerText = 'Undetermined';
+    roundResult.innerText = 'Undetermined';
+    wins = 0;
+    totalWins.innerText = wins;
+    losses = 0;
+    totalLosses.innerText = losses;
+    draws = 0;
+    totalDraws.innerText = draws;
+    totalResets.innerText = resets;
+    resets++;
 });
