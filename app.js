@@ -35,18 +35,18 @@ playButton.addEventListener('click', () => {
     if (isWinner === 'win') {
         computerThrew.innerText = computerChoice;
         roundResult.innerText = 'You WON this round!';
-        totalWins.innerText = wins;
         wins++;
+        totalWins.innerText = wins;
     } else if (isWinner === 'loss') {
         computerThrew.innerText = computerChoice;
         roundResult.innerText = 'You LOST this round!';
-        totalLosses.innerText = losses;
         losses++;
+        totalLosses.innerText = losses;
     } else if (isWinner === 'draw') {
         computerThrew.innerText = computerChoice;
         roundResult.innerText = 'This round was a DRAW!';
-        totalDraws.innerText = draws;
         draws++;
+        totalDraws.innerText = draws;
     }
 });
 
@@ -59,6 +59,6 @@ resetButton.addEventListener('click', () => {
     totalLosses.innerText = losses;
     draws = 0;
     totalDraws.innerText = draws;
-    totalResets.innerText = resets;
     resets++;
+    totalResets.innerText = resets;
 });
